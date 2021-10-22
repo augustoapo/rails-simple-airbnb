@@ -1,0 +1,10 @@
+<h1>All Flats</h1>
+<br>
+<%= link_to 'Create a new Flat', new_flat_path, class: "btn btn-secondary" %>
+<br>
+<br>
+<% @flats.each do |flat| %>
+  <h5><%= link_to flat.name, flat_path(flat)%> <%= flat.address %></h5>
+  <p><%= flat.price_per_night%> <%= flat.number_of_guests%></p>
+<% end %>
+
